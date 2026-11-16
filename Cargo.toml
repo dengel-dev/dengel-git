@@ -1,0 +1,26 @@
+[package]
+name = "dengel-git-engine"
+version = "1.0.0"
+edition = "2021"
+license = "AGPL-3.0-or-later"
+publish = false
+
+[workspace]
+members = ["rustgit"]
+default-members = ["."]
+resolver = "2"
+
+[dependencies]
+axum = "0.8"
+base64 = "0.22"
+crc32fast = "1"
+flate2 = { version = "1", features = ["zlib-rs"] }
+http-body-util = "0.1"
+rustgit = { path = "rustgit" }
+sha1 = "0.11"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "sync"] }
+
+[dev-dependencies]
+tempfile = "3"
