@@ -122,6 +122,8 @@ See [Security](SECURITY.md) and [Contributing](CONTRIBUTING.md).
 
 ## Test the same wire contract
 
+The conformance script also requires Bash and Python 3.
+
 ```sh
 cargo test --locked --workspace
 bash tests/git-conformance.sh local
